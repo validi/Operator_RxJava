@@ -20,8 +20,7 @@ import io.reactivex.rxjava3.functions.Function;
 import io.reactivex.rxjava3.observers.DisposableObserver;
 import io.reactivex.rxjava3.schedulers.Schedulers;
 
-public class FlatMapOperator extends AppCompatActivity {
-
+public class ConcatMapOperator extends AppCompatActivity {
 
     public static String TAG = "MyTag";
     private Observable<Student> myObservable;
@@ -35,7 +34,7 @@ public class FlatMapOperator extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_flat_map_operator);
+        setContentView(R.layout.activity_concat_map_operator);
         myObservable = Observable.create(new ObservableOnSubscribe<Student>() {
             @Override
             public void subscribe(@NonNull ObservableEmitter<Student> emitter) throws Throwable {
@@ -62,7 +61,7 @@ public class FlatMapOperator extends AppCompatActivity {
 //                                return student;
 //                            }
 //                        })
-                        .flatMap(new Function<Student, ObservableSource<Student>>() {
+                        .concatMap(new Function<Student, ObservableSource<Student>>() {
                             @Override
                             public ObservableSource<Student> apply(Student student) throws Throwable {
 
