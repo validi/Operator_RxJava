@@ -29,7 +29,8 @@ public class SkipOperator extends AppCompatActivity {
                 myObservable
                         .subscribeOn(Schedulers.io())
                         .observeOn(AndroidSchedulers.mainThread())
-                        .skip(15)
+                        //.skip(15)
+                        .skipLast(15)
                         .subscribeWith(getObserve()));
     }
     public DisposableObserver getObserve(){
