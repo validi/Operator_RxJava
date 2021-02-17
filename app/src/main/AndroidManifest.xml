@@ -9,17 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.From">
-        <activity android:name=".BufferOperator">
+        <activity android:name=".FilterOperator">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ConcatMapOperator">
+        <activity android:name=".BufferOperator">
 
         </activity>
-        <activity android:name=".FlatMapOperator"></activity>
+        <activity android:name=".ConcatMapOperator"></activity>
+        <activity android:name=".FlatMapOperator" />
         <activity android:name=".MapOperator" />
         <activity android:name=".CreateOperator" />
         <activity android:name=".RangeOperator" />
